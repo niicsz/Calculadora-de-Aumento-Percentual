@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Aumento Percentual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theme-switch">
+        <label for="theme-toggle">Modo Escuro:</label>
+        <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+    </div>
+    <div class="calculator">
+        <h1>Calculadora de Aumento Percentual</h1>
+        <label for="initialValue">Valor inicial:</label>
+        <input type="number" id="initialValue" placeholder="Valor inicial" required>
+        
+        <label for="percentageIncrease">Percentual de aumento:</label>
+        <input type="number" id="percentageIncrease" placeholder="%" required>
+        
+        <button onclick="calculateFinalValue()">CALCULAR</button>
+        
+        <div id="result"></div>
+    </div>
+    <section class="copyright">
+        <p>Todos os direitos reservados | Nicolas Bezerra Bini</p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
