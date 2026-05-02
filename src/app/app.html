@@ -1,0 +1,43 @@
+<div class="full-height-center" [class.dark-mode]="isDarkMode()" [class.light-mode]="!isDarkMode()">
+    <div class="theme-toggle-container">
+        <label class="toggle-label">{{ isDarkMode() ? 'Modo Escuro:' : 'Modo Claro:' }}</label>
+        <mat-slide-toggle [checked]="isDarkMode()" (change)="toggleTheme()"></mat-slide-toggle>
+    </div>
+
+    <mat-card class="calculator-card">
+        <mat-card-header>
+            <mat-card-title>Calculadora de Aumento Percentual</mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content>
+            <form (ngSubmit)="calculateFinalValue()">
+                <div class="input-row">
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Valor inicial</mat-label>
+                        <input matInput type="number" [(ngModel)]="initialValue" name="initialValue" placeholder="Valor inicial">
+                    </mat-form-field>
+                </div>
+                
+                <div class="input-row">
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Percentual de aumento</mat-label>
+                        <input matInput type="number" [(ngModel)]="percentageIncrease" name="percentageIncrease" placeholder="%">
+                        <span matTextSuffix>%</span>
+                    </mat-form-field>
+                </div>
+                
+                <button mat-flat-button color="primary" class="full-width calculate-btn" type="submit">
+                    CALCULAR
+                </button>
+            </form>
+
+            @if (resultMessage()) {
+                <p class="result-text">{{ resultMessage() }}</p>
+            }
+        </mat-card-content>
+    </mat-card>
+
+    <footer class="footer">
+        Todos os direitos reservados | Nicolas Bezerra Bini
+    </footer>
+</div>

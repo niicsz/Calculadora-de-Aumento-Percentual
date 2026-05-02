@@ -1,0 +1,16 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body.dark-mode {
+    background-color: #1a202c;
+    color: white;
+}
+
+body.light-mode {
+    background-color: #f7fafc;
+    color: black;
+}
