@@ -35,6 +35,23 @@ Este é um projeto simples de uma **Calculadora de Aumento Percentual**, agora r
 
 Resultado: O valor final será **120.00**.
 
+## Fórmula
+
+O valor final é calculado como:
+
+```
+valorFinal = valorInicial × (1 + percentual / 100)
+```
+
+## Scripts disponíveis
+
+| Comando | Descrição |
+| --- | --- |
+| `npm start` | Sobe o servidor de desenvolvimento em `http://localhost:4200/` |
+| `npm run build` | Gera o build de produção em `dist/` |
+| `npm run watch` | Build contínuo em modo de desenvolvimento |
+| `npm test` | Executa os testes unitários |
+
 ## Estrutura do Código
 
 O projeto foi refatorado para o padrão do Angular, utilizando componentes Standalone.
